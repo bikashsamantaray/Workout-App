@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are You Sure?"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="15sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This will stop your workout.You've come this far, are you sure you want to quit?"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="yes"
+            android:textSize="16sp"
+            android:backgroundTint="@color/accent"
+            android:padding="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            />
+
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="no"
+            android:textSize="16sp"
+            android:backgroundTint="@color/accent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="1dp"
+            android:layout_weight="1" />
+
+
+
+    </LinearLayout>
+</LinearLayout>

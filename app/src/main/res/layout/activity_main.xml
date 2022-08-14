@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_screen_layout_padding"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/myImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/flStart"
+        android:contentDescription="@string/image"
+        android:src="@drawable/img_main_page"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"/>
+
+    <FrameLayout
+        android:id="@+id/flStart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/item_color_ripple_accent_background_when_touched">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="START"
+            android:textColor="#135DCF"
+            android:textSize="@dimen/default_button_text_size"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBMIHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <FrameLayout
+            android:id="@+id/flBMI"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/item_color_ripple_accent_background_when_touched"
+            android:layout_marginEnd="75dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="BMI"
+                android:textColor="#135DCF"
+                android:textSize="@dimen/default_button_text_size"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flHistory"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/item_color_ripple_accent_background_when_touched">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_history" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textColor="@color/accent"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@+id/llBMIHistory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvHistory"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textColor="@color/accent"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@+id/llBMIHistory"
+        app:layout_constraintStart_toEndOf="@+id/tvCalculator"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
